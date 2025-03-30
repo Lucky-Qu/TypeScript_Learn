@@ -32,3 +32,22 @@ function aFnWithOptional(name: string, age?: number): string{
 }
 console.log(aFnWithOptional('LuckyQu'))
 console.log(aFnWithOptional('LuckyQu',20))
+//对象Object
+let person: {
+    name: string
+    age: number
+    say:() => void
+    greet(name: string):void
+} = {
+    name: 'LuckyQu',
+    age: 20,
+    say:() =>{
+        console.log("Hi! Im LuckyQu")
+    },
+    greet(name: string) {
+        console.log("Hi!",name)
+    }
+}
+person.say()
+person.greet("LuckyKai")
+console.log(person.name,person.age)

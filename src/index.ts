@@ -51,3 +51,10 @@ let person: {
 person.say()
 person.greet("LuckyKai")
 console.log(person.name,person.age)
+//联合数据类型
+//表示msg1是一个数组，数组内的值类型可能为number，string
+let msg1: (number | string)[] = [717,"LuckyQu"]
+console.log(msg1)
+//表示msg2是一个数字或字符串或数组
+let msg2: number | string | number[] = [123,456]
+console.log(msg2)

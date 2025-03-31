@@ -83,3 +83,22 @@ let worker1: worker = {
 }
 worker1.say()
 worker1.work()
+//元组tuple,是一个指定了类型以及元素的数量的一种数据结构
+let coordinate: [number, string, number, string] = [23,'N',45,'S']
+console.log(coordinate)
+//字面量，使用const关键字
+const pi: number = 3.1415926
+//此时再pi = 123 会报错，字面量定义后不允许改变值
+console.log(pi)
+
+//枚举 enum
+enum sex{"male" = 0,"female" = 1}
+function speakSex(mySex: sex): void{
+    if (mySex == 0){
+        console.log("male")
+    }else {
+        console.log("female")
+    }
+}
+speakSex(sex.male)
+speakSex(sex.female)

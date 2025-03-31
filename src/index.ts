@@ -58,3 +58,28 @@ console.log(msg1)
 //表示msg2是一个数字或字符串或数组
 let msg2: number | string | number[] = [123,456]
 console.log(msg2)
+//使用type关键字来创建类型别名
+type msg3 =  (number | string)[]
+const msg4: msg3 = [123,23]
+console.log(msg4)
+//使用interface来定义一个接口，接口之间可以继承
+interface person {
+    name: string
+    age: number
+    say:() => void
+}
+interface worker extends person {
+    work:() => void
+}
+let worker1: worker = {
+    name: "LuckyQu",
+    age: 20,
+    say():void{
+        console.log("我是",this.name)
+    },
+    work():void{
+        console.log("我会工作")
+    }
+}
+worker1.say()
+worker1.work()

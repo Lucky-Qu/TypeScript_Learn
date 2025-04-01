@@ -111,3 +111,6 @@ function speakSex(mySex: sex): void {
 
 speakSex(sex.male)
 speakSex(sex.female)
+
+//Map
+let m : Map<number,number> = new Map()
